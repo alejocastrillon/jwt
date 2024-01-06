@@ -1,10 +1,11 @@
-package com.pichincha.alejandrocastrillon.jwt.application.rest;
+package com.pichincha.alejandrocastrillon.jwt.infrastructure.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pichincha.alejandrocastrillon.jwt.infrastructure.JwtService;
+import com.pichincha.alejandrocastrillon.jwt.application.service.JwtService;
 
 import lombok.AllArgsConstructor;
+import reactor.core.publisher.Mono;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -18,7 +19,7 @@ public class JwtController {
     private final JwtService jwtService;
     
     @PostMapping()
-    public String generateJwt(@RequestPart String username, @RequestPart String password) {
+    public Mono<String> generateJwt(@RequestPart String username, @RequestPart String password) {
         return jwtService.generateToken(username);
     }
     

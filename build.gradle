@@ -6,7 +6,19 @@ plugins {
 }
 
 jacoco {
-	toolVersion = "0.8.7"
+    toolVersion = "0.8.11"
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+jacocoTestReport {
+    dependsOn test
+	reports {
+		xml.required = true
+        csv.required = true
+        html.required = true
+	}
 }
 
 group = 'com.pichincha.alejandrocastrillon'
