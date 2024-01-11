@@ -1,4 +1,4 @@
-package com.pichincha.alejandrocastrillon.jwt.domain;
+package com.pichincha.alejandrocastrillon.jwt.util;
 
 import java.util.Date;
 
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.netty.handler.ssl.OpenSslCertificateCompressionConfig.AlgorithmConfig;
 import reactor.core.publisher.Mono;
 
 @Component

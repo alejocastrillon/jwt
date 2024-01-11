@@ -10,7 +10,7 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.pichincha.alejandrocastrillon.jwt.domain.JwtUtil;
+import com.pichincha.alejandrocastrillon.jwt.util.JwtUtil;
 import com.pichincha.alejandrocastrillon.jwt.util.UtilData;
 
 import reactor.core.publisher.Mono;
