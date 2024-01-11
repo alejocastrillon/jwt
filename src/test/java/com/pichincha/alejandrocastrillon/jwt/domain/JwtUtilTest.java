@@ -3,14 +3,14 @@ package com.pichincha.alejandrocastrillon.jwt.domain;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Spy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
 @SpringBootTest
 class JwtUtilTest {
 
-    @Spy
+    @Autowired
     private JwtUtil jwtUtil;
 
     @Test

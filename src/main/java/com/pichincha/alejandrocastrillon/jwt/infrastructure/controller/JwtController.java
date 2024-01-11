@@ -19,7 +19,7 @@ public class JwtController {
     private final JwtService jwtService;
     
     @PostMapping()
-    public Mono<String> generateJwt(@RequestPart String username, @RequestPart String password) {
+    public Mono<String> generateJwt(@RequestPart(name = "username") String username, @RequestPart(name = "password") String password) {
         return jwtService.generateToken(username);
     }
     
